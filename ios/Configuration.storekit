@@ -1,0 +1,142 @@
+{
+  "appPolicies" : {
+    "eula" : "Your use of this app is subject to the Terms of Service and Privacy Policy available at https://luciddreamtrainer.app/terms and https://luciddreamtrainer.app/privacy",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "Your use of this app is subject to our Terms of Service and Privacy Policy.",
+        "policyURL" : "https://luciddreamtrainer.app/legal"
+      }
+    ]
+  },
+  "identifier" : "AA77ADB2",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "1C9C2EED",
+      "localizations" : [
+        {
+          "description" : "Unlock unlimited training sessions and full sleep phase customization",
+          "displayName" : "Premium Features",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Débloquez des sessions d'entraînement illimitées et une personnalisation complète des phases de sommeil",
+          "displayName" : "Fonctionnalités Premium",
+          "locale" : "fr_FR"
+        },
+        {
+          "description" : "Desbloquea sesiones de entrenamiento ilimitadas y personalización completa de fases de sueño",
+          "displayName" : "Funciones Premium",
+          "locale" : "es_ES"
+        }
+      ],
+      "name" : "premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "3.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "821CEFAC",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Free plan includes limited training and sleep customization. Upgrade to premium for unlimited access to all features and guided meditations",
+              "displayName" : "Premium Monthly",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Le plan gratuit inclut un entraînement et une personnalisation du sommeil limités. Passez à la version premium pour un accès illimité à toutes les fonctionnalités et méditations guidées",
+              "displayName" : "Premium Mensuel",
+              "locale" : "fr_FR"
+            },
+            {
+              "description" : "El plan gratuito incluye entrenamiento limitado y personalización del sueño. Actualiza a premium para acceso ilimitado a todas las funciones y meditaciones guiadas",
+              "displayName" : "Premium Mensual",
+              "locale" : "es_ES"
+            }
+          ],
+          "productID" : "com.tardam.lucidnow.premium.month",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "premium",
+          "subscriptionGroupID" : "1C9C2EED",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "subscriptionOffersKeyPair" : {
+    "id" : "FC98233C",
+    "privateKey" : "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgTvdwyiSHCtKqzoDOqSKNxAzFjfw1KJq3b87cTadN6xygCgYIKoZIzj0DAQehRANCAATLFSTHegouP/CouVNsHAmtFktno/iH0VgprpOfCmtTXCWnoBXQFmG+GhpvDFw5LcdSpKM9O+bP69rNBajuiWnH"
+  },
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}
