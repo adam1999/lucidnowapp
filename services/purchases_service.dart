@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:purchases_ui_flutter/purchases_ui_flutter.dart';
-import 'package:lucid_dream_trainer/translations/app_translations.dart';
+import '../PREVIOUS_LIB_VERSIONS/lib_200/translations/app_translations.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:io' show Platform;
 

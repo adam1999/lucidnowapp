@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "772977455717",
+    "project_id": "lucidnow-c2628",
+    "storage_bucket": "lucidnow-c2628.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772977455717:android:a74d799160c0f6fb51cc8c",
+        "android_client_info": {
+          "package_name": "com.tardam.lucidnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772977455717-22rdopp4omr0ef8m1qmm98k846clkb3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCViDM7mpR4jio8HwtfPpFhMMRTnwbf9c4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772977455717-22rdopp4omr0ef8m1qmm98k846clkb3r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "772977455717-knqlk7g7f7n808qa2a736les005e8qd5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tardam.lucidnow"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
