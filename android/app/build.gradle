@@ -20,18 +20,15 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.tardan.lucidnow"
-        minSdk = 24
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        applicationId "com.tardam.lucidnow" // Fixed to match google-services.json
+        minSdkVersion 24
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0.0"
     }
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.debug
-        }
-        debug {
             signingConfig = signingConfigs.debug
         }
     }
@@ -40,3 +37,6 @@ android {
 flutter {
     source = "../.."
 }
+
+// Only add these two lines
+apply plugin: 'com.google.gms.google-services'
