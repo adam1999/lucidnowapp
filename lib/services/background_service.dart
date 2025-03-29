@@ -7,6 +7,18 @@ import 'package:flutter_background_service_ios/flutter_background_service_ios.da
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:audioplayers/audioplayers.dart';
 
+// Top-level functions for background service
+@pragma('vm:entry-point')
+void _onStartBackground(ServiceInstance service) {
+  BackgroundService._onStartStatic(service);
+}
+
+@pragma('vm:entry-point')
+Future<bool> _onIosBackground(ServiceInstance service) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  return true;
+}
+
 class BackgroundService {
   static final BackgroundService _instance = BackgroundService._internal();
   factory BackgroundService() => _instance;
@@ -43,25 +55,31 @@ class BackgroundService {
     await service.configure(
       iosConfiguration: IosConfiguration(
         autoStart: false,
-        onForeground: onStart,
-        onBackground: onIosBackground,
+        onForeground: _onStartBackground,
+        onBackground: _onIosBackground,
       ),
       androidConfiguration: AndroidConfiguration(
-        onStart: onStart,
+        onStart: _onStartBackground,
         autoStart: false,
         isForegroundMode: true,
       ),
     );
 
+    // Initialize notification settings for both platforms
+    const AndroidInitializationSettings initializationSettingsAndroid =
+        AndroidInitializationSettings('@mipmap/ic_launcher'); // Using app icon as notification icon
+    
     const initializationSettingsIOS = DarwinInitializationSettings(
       requestAlertPermission: true,
       requestBadgePermission: true,
       requestSoundPermission: true,
     );
+    
     const initializationSettings = InitializationSettings(
       iOS: initializationSettingsIOS,
-      android: null,
+      android: initializationSettingsAndroid, // Added Android settings
     );
+    
     await flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
     // Start silent audio to keep the app active in background.
@@ -84,14 +102,9 @@ class BackgroundService {
     }
   }
 
+  // Static implementation of onStart for background service
   @pragma('vm:entry-point')
-  Future<bool> onIosBackground(ServiceInstance service) async {
-    WidgetsFlutterBinding.ensureInitialized();
-    return true;
-  }
-
-  @pragma('vm:entry-point')
-  void onStart(ServiceInstance service) {
+  static void _onStartStatic(ServiceInstance service) {
     service.on('stopService').listen((event) {
       service.stopSelf();
     });
@@ -108,7 +121,7 @@ class BackgroundService {
           }
         } else if (sense == 'Hearing') {
           try {
-            await audioPlayer.play(AssetSource('soundtriggers/${_instance.selectedSound}'));
+            await _instance.audioPlayer.play(AssetSource('soundtriggers/${_instance.selectedSound}'));
           } catch (e) {
             debugPrint('Error playing audio: $e');
           }
@@ -120,7 +133,7 @@ class BackgroundService {
     service.on('stopCues').listen((event) async {
       try {
         await platform.invokeMethod('stopFlashing');
-        await audioPlayer.stop();
+        await _instance.audioPlayer.stop();
       } catch (e) {
         debugPrint('Error stopping cues: $e');
       }
@@ -140,13 +153,13 @@ class BackgroundService {
     });
   }
 
-  void _handleProtocolUpdate(Map<String, dynamic>? event) {
+  static void _handleProtocolUpdate(Map<String, dynamic>? event) {
     if (event == null) return;
     _showNotification('Protocol running: ${event['currentPhase']}');
   }
 
-  void _showNotification(String message) {
-    flutterLocalNotificationsPlugin.show(
+  static void _showNotification(String message) {
+    _instance.flutterLocalNotificationsPlugin.show(
       888,
       'Lucid Dream Training',
       message,
@@ -155,6 +168,13 @@ class BackgroundService {
           presentAlert: true,
           presentBadge: true,
           presentSound: true,
+        ),
+        android: AndroidNotificationDetails(
+          'lucid_dream_channel',
+          'Lucid Dream Notifications',
+          channelDescription: 'Notifications for lucid dream training',
+          importance: Importance.high,
+          priority: Priority.high,
         ),
       ),
     );
