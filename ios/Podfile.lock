@@ -1376,21 +1376,21 @@ PODS:
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - purchases_flutter (8.6.1):
+  - purchases_flutter (8.7.0):
     - Flutter
-    - PurchasesHybridCommon (= 13.25.0)
-  - purchases_ui_flutter (8.6.1):
+    - PurchasesHybridCommon (= 13.26.0)
+  - purchases_ui_flutter (8.7.0):
     - Flutter
-    - PurchasesHybridCommonUI (= 13.25.0)
-  - PurchasesHybridCommon (13.25.0):
-    - RevenueCat (= 5.19.0)
-  - PurchasesHybridCommonUI (13.25.0):
-    - PurchasesHybridCommon (= 13.25.0)
-    - RevenueCatUI (= 5.19.0)
+    - PurchasesHybridCommonUI (= 13.26.0)
+  - PurchasesHybridCommon (13.26.0):
+    - RevenueCat (= 5.20.0)
+  - PurchasesHybridCommonUI (13.26.0):
+    - PurchasesHybridCommon (= 13.26.0)
+    - RevenueCatUI (= 5.20.0)
   - RecaptchaInterop (100.0.0)
-  - RevenueCat (5.19.0)
-  - RevenueCatUI (5.19.0):
-    - RevenueCat (= 5.19.0)
+  - RevenueCat (5.20.0)
+  - RevenueCatUI (5.20.0):
+    - RevenueCat (= 5.20.0)
   - sensors_plus (0.0.1):
     - Flutter
   - share_plus (0.0.1):
@@ -1564,13 +1564,13 @@ SPEC CHECKSUMS:
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
   path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
-  purchases_flutter: da84b1c99daa6c94f77c4e812b5a096ea8eb9916
-  purchases_ui_flutter: 2f664731a6d793e4a6eeaaee323eea5bd1292649
-  PurchasesHybridCommon: f27e7fe57a9934319373b10c260db5d6c10bbb64
-  PurchasesHybridCommonUI: 57b87f2e4feb1a9337e1f19f9b84cad5a16da970
+  purchases_flutter: c9fb5ac9bb67f96a33eec1d714c31f28a4770f85
+  purchases_ui_flutter: 09800215b1d36d9e67676c8e5cd621cccc726735
+  PurchasesHybridCommon: fa166fc8b385cf80f581f923c91d8ccffe5dd7f8
+  PurchasesHybridCommonUI: a5f005e37234f8890cfaf0ffa531e93c3cbac9a9
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
-  RevenueCat: 4be87c151dff652d2a5b7af46073db11f01ad93f
-  RevenueCatUI: 79372219c99e2d08eed0a0607004ca0872a17fd5
+  RevenueCat: e47ff90dfd271fde155a4befe48e8fc02e8281e4
+  RevenueCatUI: aa9362b300c9025d30a1b36a5cd396d0313fc8ea
   sensors_plus: 6a11ed0c2e1d0bd0b20b4029d3bad27d96e0c65b
   share_plus: 50da8cb520a8f0f65671c6c6a99b3617ed10a58a
   shared_preferences_foundation: 9e1978ff2562383bd5676f64ec4e9aa8fa06a6f7
